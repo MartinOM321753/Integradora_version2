@@ -1,0 +1,139 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+  
+}
+.pie-enlace ul li{
+    margin-left: -30px;
+  
+  }
+    
+ 
+
+  .inf {
+    max-width: 50%;
+    margin-left: 10%;
+    padding-bottom: 20px;
+    overflow: hidden;
+    font-size: 20px;
+    animation-name: slide-in;
+    animation-duration: 2s; /* Ajusta el valor según la duración deseada */
+    animation-fill-mode: forwards;
+   /*border: 2px solid black;*/  }
+  
+  .animate-onload {
+    animation-play-state: running !important;
+  }
+  
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+      opacity: .5;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .inf h2 {
+    padding-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  .inf p {
+    margin: 10px 0 3% 5%;
+    padding-right: 20px ;
+  }
+  .costo {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .main{display: flex;}/*pone la imagen aun lado de la informacion*/
+
+
+  .imagen-cab { 
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+    /*border: 2px solid black;*/
+
+  } 
+
+  .imagen-cab img{
+    object-fit: cover;
+    height: 500px;
+    border-radius: 50px;
+   
+   }
+
+    /*-------------*/
+
+    .main {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .carousel-fixed-size {
+      width: 400px;
+      height: 300px;
+    }
+
+  
+  @media screen and (max-width: 1050px) {
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imagen-cab {
+      margin-top: 20px;
+      
+    }
+    .inf {
+      max-width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      padding-bottom: 40px;
+      font-size: 20px;
+     }
+  
+     
+  }
+  
+  .carousel-fixed-size {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto; /* Añade esta línea para centrar horizontalmente el carrusel */
+     
+  }
+
+
+  @media screen and (max-width: 500px) {
+    .carousel-fixed-size {
+      width: 
+      380px;
+      height: 300px;
+      margin: 0 auto; /* Añade esta línea para centrar horizontalmente el carrusel */
+    }
+    
+  }
+
+  
+
+   
+
+  

@@ -1,0 +1,68 @@
+
+function App(){}
+
+
+    window.onload= function(event){
+        var app= new App();
+        window.app= app;
+    }
+    App.prototype.processingButton= function(event){
+        
+        const btn = event.currentTarget;
+        const carruselList= event.currentTarget.parentNode;
+        const track = event.currentTarget.parentNode.querySelector('#track');
+        const carrusel = track.querySelectorAll('.carrusel');
+
+        const carruselWidth = carrusel[0].offsetWidth;
+
+        const trackWidth = track.offsetWidth;
+
+        const listWidth = carruselList.offsetWidth;
+
+        track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0,-2)* -1);
+        btn.dataset.button == "button-prev" ? prevAction(leftPosition, carruselWidth, track) : nextAction(leftPosition, trackWidth, listWidth, carruselWidth, track);
+
+    }
+
+    let prevAction = (leftPosition, carruselWidth, track) => {
+        if(leftPosition > 0){
+            track.style.left =`${-1 * (leftPosition - carruselWidth)}px`;
+        }
+    }
+
+    let nextAction = (leftPosition, trackWidth, listWidth, carruselWidth, track) => {
+       
+        if (leftPosition < (trackWidth - listWidth)) {
+            track.style.left = `${-1 * (leftPosition + carruselWidth)}px`;
+            
+        }
+    }
+
+    /*desplazamiento con mause*/ 
+const track = document.getElementById('carrusel-list');
+
+let isMouseDown = false;
+let startX;
+let scrollLeft;
+
+track.addEventListener('mousedown', e => {
+  isMouseDown = true;
+  startX = e.pageX - track.offsetLeft;
+  scrollLeft = track.scrollLeft;
+});
+
+track.addEventListener('mouseleave', () => {
+  isMouseDown = false;
+});
+
+track.addEventListener('mouseup', () => {
+  isMouseDown = false;
+});
+
+track.addEventListener('mousemove', e => {
+  if (!isMouseDown) return;
+  e.preventDefault();
+  const x = e.pageX - track.offsetLeft;
+  const walk = (x - startX) * 2; // Ajusta la velocidad del desplazamiento
+  track.scrollLeft = scrollLeft - walk;
+});

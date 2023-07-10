@@ -1,0 +1,30 @@
+
+.co {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.edb {
+  margin-bottom: 20px;
+  border: 1px solid black;
+  padding: 5%;
+  display: flex;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.image-container {
+  margin-top: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+

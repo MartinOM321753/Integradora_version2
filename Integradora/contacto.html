@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contactos-Photo Party</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="CSS/contacto.css">
+    <link rel="stylesheet" href="CSS/style.CSS">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="Index.html"> <img src="Img/Logo.jpg" id="log" class="img-fluid"></a>
+        <div class="conteiner logo-nav-conteiner">
+            <a href="Index.html" class="logo">PHOTO PARTY</a>
+            <span class="menu-icon">Ver menu</span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="paquetes.html">Paquetes</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="empleado.html">Empleado</a></li>
+
+           <!-- 
+                    <a href="https://www.instagram.com/cabinasphotopartycuernavaca/" target="_blank"><img
+                            src="Img/redes/instagram.png"></a>
+                    <a href="https://www.facebook.com/lasmejorescabinasdemorelos/" target="_blank"><img
+                            src="Img/redes/facebook.png"></a>
+                    <a href="mailto:photopartycuernavaca@gmail.com?subject=Asunto del correo&body=Cuerpo del correo"
+                        target="_blank"><img src="Img/redes/gmail.png"></a>
+                    <a href="https://wa.me/7775501299" target="_blank"><img src="Img/redes/whatsapp.png"></a>
+                   
+                   
+                   -->
+                    <ul>
+            </nav>
+        </div>
+    
+    </header>
+    
+
+<main class="main"> 
+
+    <div class="conteiner">
+
+        <div class="cent">
+            <p style="margin-top: auto;">¿Dudas? Escríbenos</p>
+            <br>
+            <img src="Img/redes/whatsapp.png" class="a_img"><a  href="https://wa.me/7774113800" target="_blank" id="num">7774113800</a>
+            <br>
+            <img src="Img/redes/whatsapp.png" class="a_img"> <a  href="https://wa.me/7775501299" target="_blank" id="num">7775501299</a>
+     
+            <br>
+    <div class="correo"> <a href=""> photopartycuernavaca@gmail.com </a> </div>
+          
+            <div class="img"> 
+         <img src="Img/contacto.jpg" alt="" class="contact_img" >
+         
+            </div>
+        </div>
+       
+    </div>
+
+</main>
+
+
+<footer class="pie">
+
+    <div class="pie-contenedor">
+        <div class="pie-columna">
+
+            <!--  /*------*/-->
+            <div class="pie-enlace">
+                <h4>Compañia</h4>
+                <ul>
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">Nosotros</a></li>
+                    <li><a href="">Nosotros</a></li>
+                </ul>
+            </div>
+
+            <!--  /*------*/-->
+            <div class="pie-enlace">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="">Preguntas</a></li>
+                    <li><a href="">Preguntas</a></li>
+                    <li><a href="">Preguntas</a></li>
+                    <li><a href="">Preguntas</a></li>
+                </ul>
+            </div>
+
+            <!--  /*------*/-->
+            <div class="pie-enlace">
+                <h4>Tienda</h4>
+                <ul>
+                    <li><a href="">Ropa</a></li>
+                    <li><a href="">Ropa</a></li>
+                    <li><a href="">Ropa</a></li>
+                    <li><a href="">Ropa</a></li>
+                </ul>
+            </div>
+
+            <!--  /*------*/-->
+            <div class="pie-enlace">
+                <h4>Siguenos</h4>
+                <div class="social-link">
+                    <a href="https://www.facebook.com/lasmejorescabinasdemorelos/" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/cabinasphotopartycuernavaca/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/7775501299" target="_blank"> <i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:photopartycuernavaca@gmail.com?subject=Asunto del correo&body=Cuerpo del correo"
+                        target="_blank"><i class="fas fa-envelope"></i></a>
+
+                </div>
+
+                <div class="aviso">
+
+                    <a id="openModal" class="av_priv">Avisos de privacidad</a>
+                    <div id="myModal" class="modal">
+                        <div class="contenido-modal">
+                            <span class="cerrar">&times;</span>
+                            <h2>Avisos de privacidad</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, qui iste, aut
+                                dolore aliquam consequuntur repellat reiciendis odio tenetur reprehenderit est sunt
+                                veniam rerum nesciunt quasi sint minus exercitationem optio..</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <!--  /*------*/-->
+
+
+
+        </div>
+    </div>
+
+</footer>
+
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+<!--script del boton menu responsive No tocar  -->
+<script>
+
+var modal = document.getElementById("myModal");
+    var btn = document.getElementById("openModal");
+    var close = document.getElementsByClassName("cerrar")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    close.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    // Tu código jQuery va aquí
+    $(document).ready(function () {
+
+        var menuBtn = $('.menu-icon'),
+            menu = $('.navigation ul');
+
+        menuBtn.click(function () {
+
+            if (menu.hasClass('show')) {
+
+                menu.removeClass('show');
+
+            } else {
+                menu.addClass('show');
+            }
+
+        });
+
+    });
+
+
+</script>
+
+</html>
